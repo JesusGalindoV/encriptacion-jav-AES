@@ -72,10 +72,10 @@ public class CipherGUI extends JFrame implements ActionListener {
         try {
             String input = inputField.getText();
             String decryptPlainText = inputFieldDescifrar.getText();
-            //if (input.isEmpty()) {
-              //  JOptionPane.showMessageDialog(this, "El input de texto a cifrar no puede estar vacio.");
-                //return;
-            //}
+            if (input.isEmpty()) {
+                JOptionPane.showMessageDialog(this, "El input de texto a cifrar no puede estar vacio.");
+                return;
+            }
             String output;
             if (encryptButton.isSelected()) {
                 output = encrypt(input);
